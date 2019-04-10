@@ -1,43 +1,13 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>PFSbasic</title>
-  </head>
-  <body>
-    <div class="page_wrapper"><!-- .page_wrapper -->
+<?php require 'partials/head.php' ?>
 
-      <nav>
-        <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="about">About us</a></li>
-          <li><a href="about/culture">About Culture</a></li>
-          <li><a href="contact">Contact us</a></li>
-        </ul>
-      </nav>
+<h1>Submit your name</h1>
 
-      <h1>Tasks</h1>
-      <ul>
+<form method="POST" action="/names">
 
-      <?php foreach ($tasks as $task) :?>
+    <input type="text" name="name">
 
-        <li>
+    <button type="submit">Submit</button>
+    
+</form>
 
-        <?php if ($task->completed) :?>
-
-          <strike><?= $task->description ?></strike>
-
-        <?php else :?>
-
-          <?= $task->description ?>
-
-        <?php endif ?>
-
-        </li>
-
-      <?php endforeach ?>
-
-      </ul>
-    </div><!-- /.page_wrapper -->
-  </body>
-</html>
+<?php require 'partials/footer.php' ?>

@@ -2,16 +2,55 @@ This repo is created to simulate Project File Structure that resembles to some m
 
 Tree View:
 
-|-Controllers folder -|
-|                     |-about-culture.php,
-|                     |-about.php,
-|                     |-add-name.php,
-|                     |-contact.php,
-|                     |-index.php
-|-core folder -|
-|              |-database folder -|
-|              |                  |-Connection.php
-|              |                  |-QueryBuilder.php
-|              |-bootstrap.php
-|              |-Request.php
-|              |-Router.php
+|-app-|
+|     |-controllers-|
+|     |             |-PagesController.php
+|     |             |-UsersController.php
+|     |
+|     |-models-|
+|     |        |-Project.php
+|     |
+|     |-views-|
+|     |       |-partials-|
+|     |       |          |-footer.php
+|     |       |          |-head.php
+|     |       |          |-nav.php
+|     |       |
+|     |       |-about.view.php
+|     |       |-contact.view.php
+|     |       |-index.view.php
+|     |       |-users.view.php
+|     |
+|     |-routes.php
+|            
+|-core-|
+|      |-database-|
+|      |          |-Connection.php
+|      |          |-QueryBuilder.php
+|      |
+|      |-App.php
+|      |-bootstrap.php
+|      |-Request.php
+|      |-Router.php
+|
+|-public-|
+|        |-css-|
+|              |-style.css
+|
+|-vendor-|
+|        |-composer-|
+|        |          |-autoload_classmap.php
+|        |          |-autoload_namespaces.php
+|        |          |-autoload_psr4.php
+|        |          |-autoload_real.php
+|        |          |-autoload_static.php
+|        |          |-ClassLoader.php
+|        |          |-installed.json
+|        |          |-LICENSE
+|        |
+|        |-autoload.php
+|
+|-composer.json
+|-config.php
+|-index.php
+|-README.md
